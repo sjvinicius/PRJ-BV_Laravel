@@ -1,7 +1,12 @@
-@extends("system.layout")
+@extends('system.layout')
 
-@section("title", "Products - prjnome")
+<!-- @section('title', 'Products - prjnome') -->
 
-@section("content")
-    <h1>Produtos Pageaksjdaskjd</h1>
+@section('header')
+    @extends('system.header')
+@endsection
+
+@section('content')
+    {{-- <h1>Produtos Page</h1>
+    <a href="/cart">Go to Cart</a> --}}
 @endSection

@@ -20,6 +20,15 @@ return [
 
     'driver' => env('SESSION_DRIVER', 'database'),
 
+    // 'database' => [
+    //     'table' => 'usuariotoken',
+    //     'column' => [
+    //         'TOKEN' => 'id_da_sessao',
+    //         'USUARIO_ID' => 'id_do_usuario',
+    //         'DATA_CRIACAO' => 'create at',
+    //     ],
+    // ],
+
     /*
     |--------------------------------------------------------------------------
     | Session Lifetime
@@ -87,6 +96,7 @@ return [
     */
 
     'table' => env('SESSION_TABLE', 'sessions'),
+    // 'table' => env('SESSION_TABLE', 'usuariotoken'),
 
     /*
     |--------------------------------------------------------------------------
