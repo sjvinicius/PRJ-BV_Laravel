@@ -20,10 +20,10 @@ Route::middleware([IsLogged::class])->group(function () {
         return view('/application/products');
     })->name("products");
 
-    Route::get('/cart', function () {
+    Route::get('/myreservation', function () {
 
-        return view('/application/cart');
-    });
+        return view('/application/myreservation');
+    })->name("myreservation");
 });
 
 Route::group([
