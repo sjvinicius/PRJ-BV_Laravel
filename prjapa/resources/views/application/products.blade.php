@@ -68,12 +68,24 @@
                         </div>
                     </div>";
                 }
-                echo $str; // ou {{ $str }} se você estiver dentro de uma view do Blade
+                echo $str;
             @endphp
         </div>
+
     </div>
 @endSection
 
 @section('footer')
     @include('system.footer')
+    <script>
+        // Seleciona todos os elementos com a classe 'btn'
+        const buttons = document.querySelectorAll('.card > button');
+
+        // Itera sobre os botões selecionados e adiciona o evento de clique a cada um
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                console.log('Botão clicado:');
+            });
+        });
+    </script>
 @endSection

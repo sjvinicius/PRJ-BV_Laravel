@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('title', 'Laravel')</title> {{-- Corrigido o título --}}
+    <title>@yield('title', 'Laravel')</title>
 
     {{-- Bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -131,6 +131,9 @@
             border-radius: 3px !important;
         }
 
+        .card {
+            border: 1px var(--primary) solid;
+        }
     </style>
     @yield('style')
 </head>
@@ -141,14 +144,9 @@
         @yield('content')
     </div>
     @yield('footer')
-
     <script src="https://kit.fontawesome.com/e29123cf07.js" crossorigin="anonymous"></script>
     <script>
-        document.body.style.display = "none";
-        window.addEventListener('load', function() {
-            // Quando a página estiver completamente carregada, mostra o corpo da página
-            document.body.style.display = 'block';
-        });
+
     </script>
 </body>
 

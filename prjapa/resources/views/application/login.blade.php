@@ -1,9 +1,8 @@
-@extends('system.layout')
+@extends('system.prelayout')
 
-<!-- @section('title', 'Products - prjnome') -->
+@section('title', 'Login - Michele Doces')
 
 @section('header')
-    <div class='d-none'></div>
 @endsection
 @section('style')
     <style>
@@ -19,7 +18,7 @@
             -webkit-animation: Animation 10s ease infinite;
             -moz-animation: Animation 10s ease infinite;
             animation: Animation 10s ease infinite;
-            background-size: 100vw 100vh;
+            background-size: 300% 700%;
         }
 
         @-webkit-keyframes Animation {
@@ -86,7 +85,7 @@
 @endSection
 @section('content') <div class="container">
         <div style="height: 100vh !important" class="row d-flex gap-5 flex-column align-items-center justify-content-around">
-            <img src="../   ../public/imgs/Logo.png" alt="Logo Michele Doces">
+            <img src="../../public/img/Logo.png" alt="Logo Michele Doces">
             <div class="d-flex flex-column col-4 gap-3">
                 <div class="d-flex flex-column">
                     <label for="email">
@@ -98,11 +97,15 @@
                     <label for="password">
                         <p>Senha</p>
                     </label>
-                    <input id="password" type="text">
+                    <input id="password" type="password">
                 </div>
             </div>
             <div class="col-4 d-flex align-items-center flex-column">
                 <button class="w-50" onclick="window.location='{{ url('/products') }}'">Login</button>
             </div>
         </div>
-</div>@endSection
+    </div>
+@endSection
+@section('footer')
+    {{-- @include('system.footer') --}}
+@endsection
