@@ -3,13 +3,16 @@
 <!-- @section('title', 'Products - prjnome') -->
 
 @section('header')
-    <div class='d-none'></div>
 @endsection
 @section('style')
     <style>
         body {
             min-width: 100vw;
             min-height: 100vh;
+        }
+
+        label p {
+            color: #FFF;
         }
 
         #background {
@@ -64,29 +67,13 @@
             }
 
         }
-
-        p,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        label,
-        button {
-            color: #FFF !important;
-            margin-bottom: .3rem;
-            font-family: "Montserrat", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 200;
-            font-style: normal;
-        }
     </style>
 @endsection
 @section('head')
 @endSection
 @section('content') <div class="container">
         <div style="height: 100vh !important" class="row d-flex gap-5 flex-column align-items-center justify-content-around">
-            <img src="../   ../public/imgs/Logo.png" alt="Logo Michele Doces">
+            <img class="w-50" src="{{asset("/img/Logo.png")}}" alt="Logo Michele Doces">
             <div class="d-flex flex-column col-4 gap-3">
                 <div class="d-flex flex-column">
                     <label for="email">
@@ -98,7 +85,7 @@
                     <label for="password">
                         <p>Senha</p>
                     </label>
-                    <input id="password" type="text">
+                    <input id="password" type="password">
                 </div>
             </div>
             <div class="col-4 d-flex align-items-center flex-column">
