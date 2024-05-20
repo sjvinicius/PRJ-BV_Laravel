@@ -81,7 +81,7 @@
                         <div class='card d-flex align-items-center flex-column'>
                             <div class='col-12 text-center'><p>Segunda-Feira</p></div>
                             <div style='min-height: 8rem;'>img</div>
-                            <button class='col-12' data-bs-target='#mymmodal' data-bs-toggle='modal'>Quero Esse !</button>
+                            <button class='col-12' data-bs-target='#mymodal' data-bs-toggle='modal'>Quero Esse !</button>
                         </div>
                     </div>";
                 }
@@ -90,7 +90,7 @@
         </div>
 
     </div>
-    <div class="modal fade" id="mymmodal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal fade" id="mymodal" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 {{-- <div class="modal-header d-flex justify-content-between">
@@ -127,6 +127,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
 
@@ -142,4 +143,10 @@
 
 @section('footer')
     @include('system.footer')
+@endSection
+
+@section('script')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
 @endSection
