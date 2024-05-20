@@ -11,6 +11,10 @@
             min-height: 100vh;
         }
 
+        label p {
+            color: #FFF;
+        }
+
         #background {
             background: linear-gradient(-45deg, var(--primary), var(--secondary));
             min-width: 100vw;
@@ -63,29 +67,17 @@
             }
 
         }
-
-        p,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        label,
-        button {
-            color: #FFF !important;
-            margin-bottom: .3rem;
-            font-family: "Montserrat", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 200;
-            font-style: normal;
-        }
     </style>
 @endsection
 @section('head')
 @endSection
 @section('content') <div class="container">
         <div style="height: 100vh !important" class="row d-flex gap-5 flex-column align-items-center justify-content-around">
+<<<<<<< HEAD
             <img src="../../public/img/Logo.png" alt="Logo Michele Doces">
+=======
+            <img class="w-50" src="{{asset("/img/Logo.png")}}" alt="Logo Michele Doces">
+>>>>>>> 461ffe23e3d3b2cf6b84dbbc6a55a40e9bb3da1a
             <div class="d-flex flex-column col-4 gap-3">
                 <div class="d-flex flex-column">
                     <label for="email">

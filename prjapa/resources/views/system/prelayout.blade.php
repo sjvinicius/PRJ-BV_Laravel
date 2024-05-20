@@ -21,7 +21,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lancelot&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <!-- <link rel="stylesheet" href="//cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css"> -->
 
+<<<<<<< HEAD
     <style>
         :root {
             --primary: #4F1271;
@@ -135,6 +137,10 @@
             border: 1px var(--primary) solid;
         }
     </style>
+=======
+    <link rel="stylesheet" href="{{asset("/css/system/global.css")}}">
+    <link rel="stylesheet" href="{{asset("/css/system/input.css")}}">
+>>>>>>> 461ffe23e3d3b2cf6b84dbbc6a55a40e9bb3da1a
     @yield('style')
 </head>
 
@@ -145,7 +151,12 @@
     </div>
     @yield('footer')
     <script src="https://kit.fontawesome.com/e29123cf07.js" crossorigin="anonymous"></script>
+<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+=======
+    <!-- <script src="//cdn.datatables.net/2.0.7/js/dataTables.min.js"></script> -->
+    @yield("script")
+>>>>>>> 461ffe23e3d3b2cf6b84dbbc6a55a40e9bb3da1a
 </body>
 
 </html>
