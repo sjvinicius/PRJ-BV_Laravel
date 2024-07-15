@@ -10,9 +10,6 @@ class LayoutController extends Controller
 {
     public function index()
     {
-
-        $produto = Produto::all();
-
-        return view("system.layout");
+        return view("application.login");
     }
 }

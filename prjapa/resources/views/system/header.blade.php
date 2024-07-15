@@ -13,6 +13,7 @@
                 </div>
             </div>
             <div class="d-flex col-3 gap-3 justify-content-end">
+                <a class="@if (\Request::route()->getName() == 'admin') active disabled @endif " href="/admin">Admin</a>
                 <a class="@if (\Request::route()->getName() == 'products') active disabled @endif " href="/products">Produtos</a>
                 <a class="@if (\Request::route()->getName() == 'myreservation') active disabled @endif" href="/myreservation">Reservas</a>
                 <i class="fa-solid fa-cart-shopping"></i>
