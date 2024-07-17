@@ -1,12 +1,46 @@
 input {
     border-radius: 3px;
-    padding: .2rem .7rem;
+    padding: 0.2rem 0.7rem;
     font-size: 1rem;
+    border: solid 1px var(--primary);
 }
 
 button {
-    padding: .2rem 1rem;
+    padding: 0.2rem 1rem;
     background-color: var(--tertiary);
-    color: #FFF;
-    border-radius: 3px !important;
+    color: #fff;
+    border-radius: 3px ;
+}
+
+.inputnumber {
+    display: flex;
+}
+
+.inputnumber button {
+    background-color: var(--primary);
+    display: flex;
+    padding: 0.6rem;
+    height: 100%;
+    margin: 0;
+}
+
+.inputnumber button.plusbutton {
+    border-radius: 0 5px 5px 0  !important;
+}
+
+.inputnumber button.lessbutton {
+    border-radius: 5px 0 0 5px !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: none;
+    width: 3rem;
+    text-align: center;
+    border-radius: 0;
 }
