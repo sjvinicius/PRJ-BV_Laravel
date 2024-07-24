@@ -18,17 +18,12 @@ Route::middleware([IsLogged::class])->group(function () {
     Route::get('/products', function () {
 
         return view('/application/products');
-    })->name("products");    
+    })->name("products");
 
     Route::get('/myreservation', function () {
 
         return view('/application/myreservation');
     })->name("myreservation");
-
-    Route::get('/admin', function () {
-
-        return view('/application/admin');
-    })->name("admin");
 });
 
 Route::group([
