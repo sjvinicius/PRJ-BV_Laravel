@@ -24,6 +24,11 @@ Route::middleware([IsLogged::class])->group(function () {
 
         return view('/application/myreservation');
     })->name("myreservation");
+
+    Route::get('/admin', function () {
+
+        return view('/application/admin');
+    })->name("admin");
 });
 
 Route::group([
@@ -38,3 +43,4 @@ Route::group([
 });
 
 Route::post("/login", [LoginController::class, "Authentic"])->name("login");
+

@@ -21,7 +21,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lancelot&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" loading=“lazy”>
-
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" loading=“lazy” />
     <link rel="stylesheet" loading=“lazy” href="{{ asset('/css/system/global.css') }}">
     <link rel="stylesheet" loading=“lazy” href="{{ asset('/css/system/input.css') }}">
     @yield('style')
@@ -29,6 +29,7 @@
 
 <body class="d-flex flex-column justify-content-between">
     @yield('header')
+    @yield('cart')
     <div id="background" class="flex-grow-1 justify-content-start">
         @yield('content')
     </div>
