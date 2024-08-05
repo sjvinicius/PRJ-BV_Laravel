@@ -5,11 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('title', 'Laravel')</title> {{-- Corrigido o título --}}
+    <title>@yield('title', 'Laravel')</title>
 
     {{-- Bootstrap --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link loading=“lazy” href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -21,11 +20,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lancelot&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <!-- <link rel="stylesheet" href="//cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css"> -->
+        rel="stylesheet" loading=“lazy”>
 
-    <link rel="stylesheet" href="{{asset("/css/system/global.css")}}">
-    <link rel="stylesheet" href="{{asset("/css/system/input.css")}}">
+    <link rel="stylesheet" loading=“lazy” href="{{ asset('/css/system/global.css') }}">
+    <link rel="stylesheet" loading=“lazy” href="{{ asset('/css/system/input.css') }}">
     @yield('style')
 </head>
 
@@ -35,10 +33,9 @@
         @yield('content')
     </div>
     @yield('footer')
-
-    <script src="https://kit.fontawesome.com/e29123cf07.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e29123cf07.js" loading=“lazy” crossorigin="anonymous"></script>
     <!-- <script src="//cdn.datatables.net/2.0.7/js/dataTables.min.js"></script> -->
-    @yield("script")
+    @yield('script')
 </body>
 
 </html>

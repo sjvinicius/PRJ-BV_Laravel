@@ -1,6 +1,6 @@
-@extends('system.layout')
+@extends('system.prelayout')
 
-<!-- @section('title', 'Products - prjnome') -->
+@section('title', 'Login - Michele Doces')
 
 @section('header')
 @endsection
@@ -22,7 +22,7 @@
             -webkit-animation: Animation 10s ease infinite;
             -moz-animation: Animation 10s ease infinite;
             animation: Animation 10s ease infinite;
-            background-size: 100vw 100vh;
+            background-size: 300% 700%;
         }
 
         @-webkit-keyframes Animation {
@@ -92,4 +92,8 @@
                 <button class="w-50" onclick="window.location='{{ url('/products') }}'">Login</button>
             </div>
         </div>
-</div>@endSection
+    </div>
+@endSection
+@section('footer')
+    {{-- @include('system.footer') --}}
+@endsection

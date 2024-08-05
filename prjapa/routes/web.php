@@ -29,6 +29,11 @@ Route::middleware([IsLogged::class])->group(function () {
 
         return view('/application/admin');
     })->name("admin");
+
+    Route::get('/teste', function () {
+
+        return view('/system/cart');
+    })->name("cart");   
 });
 
 Route::group([
