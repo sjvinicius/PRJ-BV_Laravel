@@ -50,15 +50,15 @@
 
 <style>
     .cart {
-        display: none; /* Esconde o modal por padrão */
-        position: fixed; /* Posição fixa na tela */
-        z-index: 1; /* Fica acima de outros elementos */
+        display: none;
+        position: fixed;
+        z-index: 1;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        overflow: auto; /* Rolagem se necessário */
-        background-color: rgba(0,0,0,0.4); /* Fundo semi-transparente */
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
     }
 
     .cart-content {
@@ -118,7 +118,7 @@
     #cartItems li {
         border: 1px solid #4F1271;
         padding-bottom: 5px;
-        padding: 30px; /* Espaçamento interno (padding) em todos os lados */
+        padding: 30px;
         .h2{
             font-size: 20px;
         }
