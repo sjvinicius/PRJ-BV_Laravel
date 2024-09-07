@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LayoutController;
@@ -48,3 +49,9 @@ Route::group([
 });
 
 Route::post("/login", [LoginController::class, "Authentic"])->name("login");
+
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+
+Route::post('/admin', [ProductController::class, 'store'])->name('products.store');
+
+

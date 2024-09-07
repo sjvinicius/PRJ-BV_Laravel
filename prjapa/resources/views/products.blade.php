@@ -36,19 +36,36 @@
             </div>
         </div>
         <div class="row d-flex align-items-center justify-content-center">
-            @php
-                $str = '';
-                for ($i = 0; $i < 7; $i++) {
-                    $str .= "<div class='col-3 mt-3'>
-                                <div class='card d-flex align-items-center flex-column'>
-                                    <div class='col-12 text-center'><p>Segunda-Feira</p></div>
-                                    <div style='min-height: 8rem;'>img</div>
-                                    <button class='col-12' data-bs-target='#mymodal' data-bs-toggle='modal'>Quero Esse !</button>
-                                </div>
-                            </div>";
-                }
-                echo $str;
-            @endphp
+        @php
+            $diasSemana = [
+                'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo'
+            ];
+
+            $produtos = [
+                ['nome' => 'Produto 1', 'imagem' => 'doce1.jpg'],
+                ['nome' => 'Produto 2', 'imagem' => 'doce2.jpg'],
+                ['nome' => 'Produto 3', 'imagem' => 'doce3.jpg'],
+                ['nome' => 'Produto 4', 'imagem' => 'doce4.jpg'],
+                ['nome' => 'Produto 5', 'imagem' => 'doce5.jpg'],
+                ['nome' => 'Produto 6', 'imagem' => 'doce6.jpg'],
+                ['nome' => 'Produto 7', 'imagem' => 'doce7.jpg'],
+            ];
+
+        @endphp
+            @foreach ($diasSemana as $index => $dia)
+                <div class='col-3 mt-3'>
+                    <div class='card d-flex align-items-center flex-column'>
+                        <div class='col-12 text-center'><p>{{$dia}}</p></div>
+                        <div style='min-height: 8rem;'> 
+                            @php
+                                $produto = $produtos[$index];
+                            @endphp
+                            <img src="{{ asset('img/' . $produto['imagem']) }}" alt="{{$produto['nome'] }}" style="width: 100%; height: auto;">
+                        </div>
+                        <button class='col-12' data-bs-target='#mymodal' data-bs-toggle='modal'></button>
+                    </div>
+                </div>";
+            @endforeach
         </div>
 
     </div>
