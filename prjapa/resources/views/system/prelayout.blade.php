@@ -29,6 +29,7 @@
 
 <body class="d-flex flex-column justify-content-between">
     @yield('header')
+    @yield('cart')
     <div id="background" class="flex-grow-1 justify-content-start">
         @yield('content')
     </div>

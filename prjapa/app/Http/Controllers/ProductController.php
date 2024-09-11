@@ -6,25 +6,31 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 
 class ProductController extends Controller
-{   
+{
     /*
-    *Função utilizada para ... 
-    */
-     public function index()
-     {
-            $produtos = Product::all();
+     *Função utilizada para ...
+     */
+    public function index()
+    {
+        $produtos = Product::all();
 
-            $diasSemana = [
-                'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo'
-            ];
-    
-            return view('products', [
-                'produtos' => $produtos,
-                'diasSemana' => $diasSemana
-            ]);
-     }
+        $diasSemana = [
+            'Segunda-feira',
+            'Terça-feira',
+            'Quarta-feira',
+            'Quinta-feira',
+            'Sexta-feira',
+            'Sábado',
+            'Domingo',
+        ];
 
-     public function store(Request $request)
+        return view('application.products', [
+            'produtos' => $produtos,
+            'diasSemana' => $diasSemana,
+        ]);
+    }
+
+    public function store(Request $request)
     {
         $request->validate([
             'product-name' => 'required|string|max:50',
