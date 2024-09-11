@@ -8,7 +8,7 @@
     border-radius: 0 !important;
 }
 
-.card div p {
+.title-product {
     background-color: var(--secondary);
     border-radius: 5px 5px 0 0 !important;
     color: var(--primary);
