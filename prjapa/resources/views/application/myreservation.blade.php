@@ -8,68 +8,98 @@
 
 @section('style')
     <style>
-td {
-    padding:15px!important;
-    display: flex;
-    justify-content: center;
-}
-th, td { 
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-}
+        .card-title label {
+            font-weight: bold;
+            margin: 1rem 0;
+            padding-left: .5rem;
+            font-size: 1.3rem;
+            color: var(--primary)
+        }
+
+        thead th {
+            color: var(--primary) !important;
+        }
+
+        .subtitle {
+
+        }
     </style>
 @endsection
 
 @section('content')
-<body class="content" style="display: flex; justify-content: center; align-items: center;">  
-    <div class="my-products" style="background-color: BFACC8; margin-left:120px; margin-right:120px; border;  border-radius: 8px; border: 1px solid #4F1271;">
-        <h2 style="color:4F1271; padding-left: 15px; font-family: Arial, sans-serif; font-weight: 400;">Meus Pedidos</h2>
-        <div class="table-container">
-            <table style="width: 100%; border-collapse: collapse; border: 1px solid #4F1271; background-color:#FFF;">
-                <thead style="display:contents;">
-                    <tr style="display:grid; color: 4F1271; grid-template-columns: repeat(7, 1fr);">
-                        <th>Cancelar</th>
-                        <th>Id</th>
-                        <th>Produto</th>
-                        <th>Data de Criação</th>
-                        <th>Data da Reserva</th>
-                        <th>Quantidade</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <tbody style="display:contents;">
-                    <tr style="display: grid; grid-template-columns: repeat(7, 1fr);">
-                        <td>
-                            <a href="#" class="cancel-product">
-                                <i class="bi bi-trash"></i>Cancelar
-                            </a>
-                        </td>
-                        <td>1</td>
-                        <td>Produto A</td>
-                        <td>2023-01-01</td>
-                        <td>2023-01-05</td>
-                        <td>3</td>
-                        <td>R$ 300,00</td>
-                    </tr>
-                    <tr style="display: grid; grid-template-columns: repeat(7, 1fr);">
-                        <td>
-                            <a href="#" class="cancel-product">
-                                <i class="bi bi-trash"></i>Cancelar
-                            </a>
-                        </td>
-                        <td>2</td>
-                        <td>Produto B</td>
-                        <td>2023-01-02</td>
-                        <td>2023-01-06</td>
-                        <td>5</td>
-                        <td>R$ 500,00</td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="container">
+        <div class="row my-3">
+            <div class="card p-0">
+                <div class="card-title" style="border-bottom: solid 1px var(--primary)">
+                    <div class="container">
+                        <label>Minhas Reservas</label>
+                        <label class="subtitle">Últimas 4 semanas</label>
+                    </div>
+                </div>
+                <div class="container">
+                    <table class="table table-striped table-hover table-responsive">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    Ações
+                                </th>
+                                <th scope="col">
+                                    #
+                                </th>
+                                <th scope="col">
+                                    Produto
+                                </th>
+                                <th scope="col">
+                                    Criação da Reserva
+                                </th>
+                                <th scope="col">
+                                    Data da Reserva
+                                </th>
+                                <th scope="col">
+                                    Quantidade
+                                </th>
+                                <th scope="col">
+                                    Total
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
         </div>
     </div>
-</body>
 @endSection
 
 @section('footer')

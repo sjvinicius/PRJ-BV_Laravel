@@ -21,7 +21,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lancelot&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" loading=“lazy”>
-
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" loading=“lazy” />
     <link rel="stylesheet" loading=“lazy” href="{{ asset('/css/system/global.css') }}">
     <link rel="stylesheet" loading=“lazy” href="{{ asset('/css/system/input.css') }}">
     @yield('style')
@@ -34,10 +34,10 @@
         @yield('content')
     </div>
     @yield('footer')
-    <script src="https://kit.fontawesome.com/e29123cf07.js" loading=“lazy” crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+    <script src="https://kit.fontawesome.com/e29123cf07.js" loading=“lazy” crossorigin="anonymous"></script>
     <!-- <script src="//cdn.datatables.net/2.0.7/js/dataTables.min.js"></script> -->
     @yield('script')
 </body>

@@ -6,7 +6,7 @@
                     <a href="/products" style="width:15%">
                         <img src="{{ asset('/img/Logo.png') }}" alt="" class="w-100">
                     </a>
-                    <p>Olá
+                    <p class="text-white">Olá
                         <strong class="active">Bruno Hiramuki</strong>
                         é bom ter você aqui !
                     </p>
@@ -16,7 +16,8 @@
                 <a class="@if (\Request::route()->getName() == 'admin') active disabled @endif " href="/admin">Admin</a>
                 <a class="@if (\Request::route()->getName() == 'products') active disabled @endif " href="/products">Produtos</a>
                 <a class="@if (\Request::route()->getName() == 'myreservation') active disabled @endif" href="/myreservation">Reservas</a>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-cart-shopping" data-bs-toggle="offcanvas" data-bs-target="#cartcanvas"
+                    aria-controls="cartcanvas"></i>
                 <i class="fa-solid fa-power-off disabled"></i>
             </div>
 
@@ -101,8 +102,8 @@
                                             horizontal_rule
                                         </span>
                                     </button>
-                                    <input class="quantity" min="0" max="99" name="quantity" value="1"
-                                        type="number" style="border-radius: 10px">
+                                    <input class="quantity" min="0" max="99" name="quantity"
+                                        value="1" type="number" style="border-radius: 10px">
                                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
                                         style="background-color:var(--primary);" class="p-2 m-0">
                                         <span style="font-size:.7rem" class="material-symbols-outlined">

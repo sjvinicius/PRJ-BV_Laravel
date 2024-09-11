@@ -59,7 +59,7 @@
 
             @endphp
             @foreach ($diasSemana as $index => $dia)
-                <div class='col-3 mt-3'>
+                <div class='col-3 py-2'>
                     <div class='card d-flex align-items-center flex-column'>
                         <div class='col-12 text-center title-product'>
                             {{ $dia }}
