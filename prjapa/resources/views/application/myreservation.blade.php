@@ -64,34 +64,37 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>@fat</td>
-                                <td>@fat</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td>@twitter</td>
-                                <td>@twitter</td>
-                                <td>@twitter</td>
-                            </tr>
+                            @php
+                            $pedidos = [];
+
+                            for ($i = 0; $i < 7; $i++) {
+                                $pedidos[] = [
+                                    'id' => strval($i + 1),
+                                    'nome' => 'nome' . ($i + 1),
+                                    'data-ini' => '',
+                                    'data-fim' => '',
+                                    'quantidade' => '',
+                                    'total' => $i + 1
+                                ];
+                            }
+
+                            $id = 4;
+                            @endphp
+                            @foreach ($pedidos as $pedido)
+                                <tr>
+                                    <th scope="row">
+                                        <a href="{{route('myreservation.destroy', ['id' => $id])}}" title="Excluir">
+                                            <i class="fas fa-trash" style="color: red"></i>
+                                        </a></th>
+                                    <td>{{$pedido['id']}}</td>
+                                    <td>{{$pedido['nome']}}</td>
+                                    <td>{{$pedido['data-ini']}}</td>
+                                    <td>{{$pedido['data-fim']}}</td>
+                                    <td>{{$pedido['quantidade']}}</td>
+                                    <td>{{$pedido['total']}}</td>
+                                </tr>
+                            @endforeach
                             </tr>
                         </tbody>
                     </table>

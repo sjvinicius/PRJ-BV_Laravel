@@ -27,7 +27,7 @@
     @yield('style')
 </head>
 
-<body class="d-flex flex-column justify-content-between">
+<body class="d-flex flex-column justify-content-between" style="overflow-x: hidden">
     @yield('header')
     @yield('cart')
     <div id="background" class="flex-grow-1 justify-content-start">

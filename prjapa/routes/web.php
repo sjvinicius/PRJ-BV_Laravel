@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReservationsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LayoutController;
@@ -53,5 +54,7 @@ Route::post("/login", [LoginController::class, "Authentic"])->name("login");
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
 Route::post('/admin', [ProductController::class, 'store'])->name('products.store');
+
+Route::get("/myreservation/{id}", [ReservationsController::class, "destroy"])->name('myreservation.destroy');
 
 
